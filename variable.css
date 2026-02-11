@@ -6,55 +6,10 @@
   padding: 0;
 }
 
-:root {
-  /* TextPresent 1 (Bold) */
-  --tp1-font-family: "Manrope", sans-serif;
-  --tp1-font-weight: 700;
-  --tp1-font-size: 20px;
-  --tp1-line-height: 130%;
-  --tp1-letter-spacing: 0.25px;
 
-  /* TextPresent 2 (Bold) */
-  --tp2b-font-family: "Manrope", sans-serif;
-  --tp2b-font-weight: 700;
-  --tp2b-font-size: 13px;
-  --tp2b-line-height: 140%;
-  --tp2b-letter-spacing: 0.12px;
-
-  /* TextPresent 2 (Medium) */
-  --tp2m-font-family: "Manrope", sans-serif;
-  --tp2m-font-weight: 500;
-  --tp2m-font-size: 13px;
-  --tp2m-line-height: 140%;
-  --tp2m-letter-spacing: 0.12px;
-
-  /* TextPresent 3 (Regular) */
-  --tp3-font-family: "Manrope", sans-serif;
-  --tp3-font-weight: 400;
-  --tp3-font-size: 13px;
-  --tp3-line-height: 140%;
-  --tp3-letter-spacing: 0.25px;
-
-
-  /* --- COLOR PALETTE --- */
-
-  /* Neutrals */
-  --white: hsl(0, 100%, 100%);
-
-  /* Grigi */
-  --grey-200: hsl(210, 46%, 95%);
-  --grey-400: hsl(212, 23%, 69%);
-  --grey-500: hsl(214, 17%, 51%);
-  --grey-900: hsl(217, 19%, 35%);
-}
-
-
-/* ==========================================================
-   RESET + ROOT
-========================================================== */
 :root {
   /* Colors */
-  --clr-grey: hsl(148, 148%, 148%);
+  --clr-grey: hsl(0, 0%, 58%);
   --clr-white: hsl(0, 100%, 100%);
   --clr-blue-800: hsl(234, 29%, 20%);
   --clr-blue-700: hsl(235, 18%, 26%);
@@ -66,14 +21,73 @@
     hsl(346, 100%, 66%) 
   );
 
-  /* Typography (fluid) */
-  --fs-title: clamp(1.8rem, 4vw, 2.8rem);
-  --fs-body: clamp(0.9rem, 2vw, 1rem);
-  --fs-small: clamp(0.75rem, 1.5vw, 0.875rem);
 
-  /* Spacing (fluid) */
-  --space-100: clamp(0.5rem, 1vw, 0.75rem);
-  --space-200: clamp(1rem, 2vw, 1.5rem);
-  --space-300: clamp(1.5rem, 3vw, 2rem);
-  --space-400: clamp(2rem, 4vw, 3rem);
+  /* ============================
+     TEXT PRESET 1 (Desktop → Mobile)
+  ============================ */
+  --fs-preset-1: clamp(2.5rem, 5vw, 3.5rem);
+  --lh-preset-1: 1;
+  --ls-preset-1: 0;
+  --ff-preset-1: "Roboto", sans-serif;
+  --fw-preset-1: 700;
+
+  /* ============================
+     TEXT PRESET 2 — BOLD
+  ============================ */
+  --fs-preset-2-bold: 1rem;
+  --lh-preset-2-bold: 1.5;
+  --ls-preset-2-bold: 0;
+  --ff-preset-2-bold: "Roboto", sans-serif;
+  --fw-preset-2-bold: 700;
+
+  /* ============================
+     TEXT PRESET 2 — REGULAR
+  ============================ */
+  --fs-preset-2-regular: 1rem;
+  --lh-preset-2-regular: 1.5;
+  --ls-preset-2-regular: 0;
+  --ff-preset-2-regular: "Roboto", sans-serif;
+  --fw-preset-2-regular: 400;
+
+  /* ============================
+     TEXT PRESET 3
+  ============================ */
+  --fs-preset-3: 0.75rem;
+  --lh-preset-3: 1.5;
+  --ls-preset-3: 0;
+  --ff-preset-3: "Roboto", sans-serif;
+  --fw-preset-3: 700;
+
+
+  /* ============================
+     SPACING — FIXED (REM) (Figma → CSS)
+     Conversione diretta da Figma (1rem = 16px)
+  ============================ */
+  --spacing-100: 0.5rem;   /* 8px  */
+  --spacing-200: 1rem;     /* 16px */
+  --spacing-300: 1.5rem;   /* 24px */
+  --spacing-400: 2rem;     /* 32px */
+  --spacing-500: 2.5rem;   /* 40px */
+  --spacing-600: 3rem;     /* 48px */
+  --spacing-800: 4rem;     /* 64px */
+  --spacing-900: 4.5rem;   /* 72px */
+  --spacing-1300: 6.5rem;  /* 104px */
+
+  /* ============================
+     SPACING — FLUID (CLAMP)
+     Mobile → Desktop
+     Mobile = ~75% del valore desktop
+     Desktop = valore pieno da Figma
+     Middle = 2–7vw per fluidità controllata
+  ============================ */
+  --spacing-100-fluid: clamp(0.375rem, 1vw, 0.5rem);   /* 6px → 8px  */
+  --spacing-200-fluid: clamp(0.75rem, 2vw, 1rem);      /* 12px → 16px */
+  --spacing-300-fluid: clamp(1.125rem, 3vw, 1.5rem);   /* 18px → 24px */
+  --spacing-400-fluid: clamp(1.5rem, 4vw, 2rem);       /* 24px → 32px */
+  --spacing-500-fluid: clamp(1.875rem, 4.5vw, 2.5rem); /* 30px → 40px */
+  --spacing-600-fluid: clamp(2.25rem, 5vw, 3rem);      /* 36px → 48px */
+  --spacing-800-fluid: clamp(3rem, 6vw, 4rem);         /* 48px → 64px */
+  --spacing-900-fluid: clamp(3.375rem, 7vw, 4.5rem);   /* 54px → 72px */
+  --spacing-1300-fluid: clamp(4.875rem, 10vw, 6.5rem); /* 78px → 104px */
+
 }
