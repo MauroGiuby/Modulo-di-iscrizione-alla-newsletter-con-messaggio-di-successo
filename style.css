@@ -39,6 +39,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-300);
+  border-radius: 0; /* contenuto senza radius */
 }
 
 .card__title {
@@ -139,7 +140,7 @@ body {
   font-family: var(--ff-preset-2-bold);
   font-weight: var(--fw-preset-2-bold);
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .card__btn:hover {
@@ -215,11 +216,11 @@ body {
   margin-top: var(--spacing-400);
   text-align: center;
   font-size: var(--fs-preset-3);
-  color: var(--clr-grey);
+  color: var(--clr-white);
 }
 
 .attribution a {
-  color: var(--clr-blue-800);
+  color: var(--clr-red);
   font-weight: var(--fw-preset-2-bold);
   text-decoration: none;
 }
