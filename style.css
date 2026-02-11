@@ -141,6 +141,20 @@ img {
 }
 
 /* ==========================================================
+   ATTRIBUTION FOOTER
+   - Sempre visibile sotto la card
+   - Centrato, leggero, non invasivo
+   - Tipografia fluida
+========================================================== */
+
+.attribution {
+  font-size: 0.75rem;
+  text-align: center;
+  margin-top: 20px;
+  color: var(--grey);
+}
+
+/* ==========================================================
    MEDIA QUERY (DESKTOP)
 ========================================================== */
 @media (min-width: 800px) {
