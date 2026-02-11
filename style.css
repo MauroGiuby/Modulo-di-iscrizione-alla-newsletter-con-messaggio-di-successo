@@ -1,23 +1,19 @@
 body {
-  font-family: "Manrope", sans-serif;
-  background-color: var(--clr-grey-200);
+  font-family: var(--ff-preset-2-regular);
+  background-color: var(--clr-blue-700);
   min-height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: var(--space-300);
-}
-
-img {
-  max-width: 100%;
-  display: block;
+  padding: var(--spacing-400);
+  color: var(--clr-blue-800);
 }
 
 /* ==========================================================
    CARD WRAPPER
 ========================================================== */
 .card {
-  background: var(--clr-white);
+  background-color: var(--clr-white);
   border-radius: 1rem;
   overflow: hidden;
   max-width: 52rem;
@@ -39,30 +35,37 @@ img {
    CONTENT
 ========================================================== */
 .card__content {
-  padding: var(--space-300);
+  padding: var(--spacing-400);
   display: flex;
   flex-direction: column;
-  gap: var(--space-200);
+  gap: var(--spacing-300);
 }
 
 .card__title {
-  font-size: var(--fs-title);
-  color: var(--clr-grey-900);
-  line-height: 1.2;
+  font-size: var(--fs-preset-1);
+  line-height: var(--lh-preset-1);
+  letter-spacing: var(--ls-preset-1);
+  font-family: var(--ff-preset-1);
+  font-weight: var(--fw-preset-1);
+  color: var(--clr-blue-800);
 }
 
 .card__description {
-  font-size: var(--fs-body);
-  color: var(--clr-grey-500);
-  line-height: 1.5;
+  font-size: var(--fs-preset-2-regular);
+  line-height: var(--lh-preset-2-regular);
+  letter-spacing: var(--ls-preset-2-regular);
+  font-family: var(--ff-preset-2-regular);
+  font-weight: var(--fw-preset-2-regular);
+  color: var(--clr-blue-700);
 }
 
 .card__list {
   display: flex;
   flex-direction: column;
-  gap: var(--space-100);
-  font-size: var(--fs-body);
-  color: var(--clr-grey-900);
+  gap: var(--spacing-200);
+  font-size: var(--fs-preset-2-regular);
+  line-height: var(--lh-preset-2-regular);
+  color: var(--clr-blue-800);
 }
 
 /* ==========================================================
@@ -71,7 +74,7 @@ img {
 .card__form {
   display: flex;
   flex-direction: column;
-  gap: var(--space-100);
+  gap: var(--spacing-200);
 }
 
 .card__field-header {
@@ -81,14 +84,17 @@ img {
 }
 
 .card__label {
-  font-size: var(--fs-small);
-  font-weight: 700;
-  color: var(--clr-grey-900);
+  font-size: var(--fs-preset-3);
+  line-height: var(--lh-preset-3);
+  letter-spacing: var(--ls-preset-3);
+  font-family: var(--ff-preset-3);
+  font-weight: var(--fw-preset-3);
+  color: var(--clr-blue-800);
 }
 
 .card__error-msg {
-  font-size: var(--fs-small);
-  color: #e63946;
+  font-size: var(--fs-preset-3);
+  color: var(--clr-red);
   display: none;
 }
 
@@ -97,33 +103,36 @@ img {
 }
 
 .card__input {
-  padding: 0.9rem 1rem;
+  padding: var(--spacing-200);
   border-radius: 0.5rem;
-  border: 1px solid var(--clr-grey-400);
-  font-size: var(--fs-body);
+  border: 1px solid var(--clr-grey);
+  font-size: var(--fs-preset-2-regular);
+  line-height: var(--lh-preset-2-regular);
 }
 
 .card__input.error {
-  border-color: #e63946;
-  background-color: #ffe6e6;
+  border-color: var(--clr-red);
+  background-color: hsl(4, 100%, 95%);
 }
 
 /* ==========================================================
    BUTTON
 ========================================================== */
 .card__btn {
-  padding: 1rem;
-  background-color: var(--clr-grey-900);
+  padding: var(--spacing-200);
+  background: var(--clr-blue-800);
   color: var(--clr-white);
   border: none;
   border-radius: 0.5rem;
-  font-size: var(--fs-body);
+  font-size: var(--fs-preset-2-bold);
+  font-family: var(--ff-preset-2-bold);
+  font-weight: var(--fw-preset-2-bold);
   cursor: pointer;
   transition: background 0.2s ease;
 }
 
 .card__btn:hover {
-  background-color: var(--clr-grey-500);
+  background: var(--clr-blue-700);
 }
 
 /* ==========================================================
@@ -132,8 +141,8 @@ img {
 .card__success {
   display: none;
   flex-direction: column;
-  gap: var(--space-200);
-  padding: var(--space-300);
+  gap: var(--spacing-300);
+  padding: var(--spacing-400);
 }
 
 .card__success.visible {
@@ -141,21 +150,7 @@ img {
 }
 
 /* ==========================================================
-   ATTRIBUTION FOOTER
-   - Sempre visibile sotto la card
-   - Centrato, leggero, non invasivo
-   - Tipografia fluida
-========================================================== */
-
-.attribution {
-  font-size: 0.75rem;
-  text-align: center;
-  margin-top: 20px;
-  color: var(--grey);
-}
-
-/* ==========================================================
-   MEDIA QUERY (DESKTOP)
+   DESKTOP LAYOUT
 ========================================================== */
 @media (min-width: 800px) {
   .card {
@@ -165,9 +160,30 @@ img {
 
   .card__content {
     width: 50%;
+    padding: var(--spacing-500);
   }
 
   .card__image-container {
     width: 50%;
   }
+}
+
+/* ==========================================================
+   ATTRIBUTION FOOTER
+========================================================== */
+.attribution {
+  margin-top: var(--spacing-400);
+  text-align: center;
+  font-size: var(--fs-preset-3);
+  color: var(--clr-grey);
+}
+
+.attribution a {
+  color: var(--clr-blue-800);
+  font-weight: var(--fw-preset-2-bold);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  color: var(--clr-blue-700);
 }
