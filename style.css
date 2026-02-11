@@ -66,6 +66,17 @@ body {
   font-size: var(--fs-preset-2-regular);
   line-height: var(--lh-preset-2-regular);
   color: var(--clr-blue-800);
+  list-style: none;
+  padding-left: 0;
+}
+
+.card__list li {
+  background-image: url(./newsletter-sign-up-with-success-message-main/assets/images/icon-list.svg);
+  background-repeat: no-repeat;
+  background-position: left top 0px;
+  padding-left: 36px;
+  margin-bottom: 12px;
+  line-height: 1.4;
 }
 
 /* ==========================================================
@@ -112,7 +123,7 @@ body {
 
 .card__input.error {
   border-color: var(--clr-red);
-  background-color: hsl(4, 100%, 95%);
+  background-color: var(--clr-blue-800);
 }
 
 /* ==========================================================
