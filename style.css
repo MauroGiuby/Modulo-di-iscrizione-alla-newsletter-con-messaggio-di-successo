@@ -20,6 +20,7 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
+  border-radius: 0;
 }
 
 /* ==========================================================
@@ -29,6 +30,12 @@ body {
 .card__image {
   width: 100%;
   display: block;
+}
+
+.card__image-container img { 
+  width: 100%; height: auto; 
+  aspect-ratio: 375 / 284; /* Figma mobile */ 
+  object-fit: cover; 
 }
 
 /* ==========================================================
