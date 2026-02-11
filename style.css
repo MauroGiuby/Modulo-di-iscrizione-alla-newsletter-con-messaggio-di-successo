@@ -1,0 +1,159 @@
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--clr-grey-200);
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-300);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ==========================================================
+   CARD WRAPPER
+========================================================== */
+.card {
+  background: var(--clr-white);
+  border-radius: 1rem;
+  overflow: hidden;
+  max-width: 52rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================
+   IMAGE
+========================================================== */
+.card__image-container picture,
+.card__image {
+  width: 100%;
+  display: block;
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+.card__content {
+  padding: var(--space-300);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-200);
+}
+
+.card__title {
+  font-size: var(--fs-title);
+  color: var(--clr-grey-900);
+  line-height: 1.2;
+}
+
+.card__description {
+  font-size: var(--fs-body);
+  color: var(--clr-grey-500);
+  line-height: 1.5;
+}
+
+.card__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-100);
+  font-size: var(--fs-body);
+  color: var(--clr-grey-900);
+}
+
+/* ==========================================================
+   FORM
+========================================================== */
+.card__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-100);
+}
+
+.card__field-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__label {
+  font-size: var(--fs-small);
+  font-weight: 700;
+  color: var(--clr-grey-900);
+}
+
+.card__error-msg {
+  font-size: var(--fs-small);
+  color: #e63946;
+  display: none;
+}
+
+.card__error-msg.active {
+  display: block;
+}
+
+.card__input {
+  padding: 0.9rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--clr-grey-400);
+  font-size: var(--fs-body);
+}
+
+.card__input.error {
+  border-color: #e63946;
+  background-color: #ffe6e6;
+}
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+.card__btn {
+  padding: 1rem;
+  background-color: var(--clr-grey-900);
+  color: var(--clr-white);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: var(--fs-body);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.card__btn:hover {
+  background-color: var(--clr-grey-500);
+}
+
+/* ==========================================================
+   SUCCESS SCREEN
+========================================================== */
+.card__success {
+  display: none;
+  flex-direction: column;
+  gap: var(--space-200);
+  padding: var(--space-300);
+}
+
+.card__success.visible {
+  display: flex;
+}
+
+/* ==========================================================
+   MEDIA QUERY (DESKTOP)
+========================================================== */
+@media (min-width: 800px) {
+  .card {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .card__content {
+    width: 50%;
+  }
+
+  .card__image-container {
+    width: 50%;
+  }
+}

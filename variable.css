@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* TextPresent 1 (Bold) */
+  --tp1-font-family: "Manrope", sans-serif;
+  --tp1-font-weight: 700;
+  --tp1-font-size: 20px;
+  --tp1-line-height: 130%;
+  --tp1-letter-spacing: 0.25px;
+
+  /* TextPresent 2 (Bold) */
+  --tp2b-font-family: "Manrope", sans-serif;
+  --tp2b-font-weight: 700;
+  --tp2b-font-size: 13px;
+  --tp2b-line-height: 140%;
+  --tp2b-letter-spacing: 0.12px;
+
+  /* TextPresent 2 (Medium) */
+  --tp2m-font-family: "Manrope", sans-serif;
+  --tp2m-font-weight: 500;
+  --tp2m-font-size: 13px;
+  --tp2m-line-height: 140%;
+  --tp2m-letter-spacing: 0.12px;
+
+  /* TextPresent 3 (Regular) */
+  --tp3-font-family: "Manrope", sans-serif;
+  --tp3-font-weight: 400;
+  --tp3-font-size: 13px;
+  --tp3-line-height: 140%;
+  --tp3-letter-spacing: 0.25px;
+
+
+  /* --- COLOR PALETTE --- */
+
+  /* Neutrals */
+  --white: hsl(0, 100%, 100%);
+
+  /* Grigi */
+  --grey-200: hsl(210, 46%, 95%);
+  --grey-400: hsl(212, 23%, 69%);
+  --grey-500: hsl(214, 17%, 51%);
+  --grey-900: hsl(217, 19%, 35%);
+}
+
+
+/* ==========================================================
+   RESET + ROOT
+========================================================== */
+:root {
+  /* Colors */
+  --clr-grey-900: hsl(234, 29%, 20%);
+  --clr-grey-500: hsl(235, 18%, 26%);
+  --clr-grey-400: hsl(231, 7%, 60%);
+  --clr-grey-200: hsl(0, 0%, 98%);
+  --clr-white: #fff;
+
+  /* Typography (fluid) */
+  --fs-title: clamp(1.8rem, 4vw, 2.8rem);
+  --fs-body: clamp(0.9rem, 2vw, 1rem);
+  --fs-small: clamp(0.75rem, 1.5vw, 0.875rem);
+
+  /* Spacing (fluid) */
+  --space-100: clamp(0.5rem, 1vw, 0.75rem);
+  --space-200: clamp(1rem, 2vw, 1.5rem);
+  --space-300: clamp(1.5rem, 3vw, 2rem);
+  --space-400: clamp(2rem, 4vw, 3rem);
+}
