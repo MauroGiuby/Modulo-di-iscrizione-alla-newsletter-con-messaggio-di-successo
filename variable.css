@@ -54,11 +54,17 @@
 ========================================================== */
 :root {
   /* Colors */
-  --clr-grey-900: hsl(234, 29%, 20%);
-  --clr-grey-500: hsl(235, 18%, 26%);
-  --clr-grey-400: hsl(231, 7%, 60%);
-  --clr-grey-200: hsl(0, 0%, 98%);
-  --clr-white: #fff;
+  --clr-grey: hsl(148, 148%, 148%);
+  --clr-white: hsl(0, 100%, 100%);
+  --clr-blue-800: hsl(234, 29%, 20%);
+  --clr-blue-700: hsl(235, 18%, 26%);
+  --clr-red: hsl(4, 100%, 67%);
+
+  --clr-gradient-4: linear-gradient( 
+    135deg, 
+    hsl(15, 100%, 61%), 
+    hsl(346, 100%, 66%) 
+  );
 
   /* Typography (fluid) */
   --fs-title: clamp(1.8rem, 4vw, 2.8rem);
