@@ -163,21 +163,50 @@ body {
 /* ==========================================================
    DESKTOP LAYOUT
 ========================================================== */
-@media (min-width: 800px) {
+@media (min-width: 900px) {
   .card {
     flex-direction: row-reverse;
     align-items: center;
+    border-radius: 1rem;
   }
 
   .card__content {
     width: 50%;
     padding: var(--spacing-500);
+    border-radius: 1rem 0 0 1rem; /* radius lato sinistro */
   }
 
   .card__image-container {
     width: 50%;
   }
+
+  .card__image-container img { 
+    border-radius: 0 1rem 1rem 0; /* radius solo lato destro */ 
+  }
 }
+
+/* ============================
+   TABLET (608px)
+   immagine sopra, testo sotto
+   border-radius attivi
+============================ */
+
+@media (min-width: 600px) and (max-width: 899px) {
+
+  .card {
+    flex-direction: column;
+    border-radius: 1rem; /* attivo */
+  }
+
+  .card__image-container img {
+    border-radius: 1rem 1rem 0 0; /* radius solo sopra */
+  }
+
+  .card__content {
+    border-radius: 0 0 1rem 1rem; /* radius solo sotto */
+  }
+}
+
 
 /* ==========================================================
    ATTRIBUTION FOOTER
