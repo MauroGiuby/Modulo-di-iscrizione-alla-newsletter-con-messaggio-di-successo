@@ -33,7 +33,8 @@ body {
 }
 
 .card__image-container img { 
-  width: 100%; height: auto; 
+  width: 100%; 
+  height: auto; 
   aspect-ratio: 375 / 284; /* Figma mobile */ 
   object-fit: cover; 
 }
@@ -173,9 +174,11 @@ body {
 ========================================================== */
 @media (min-width: 900px) {
   .card {
+    display: flex;
     flex-direction: row-reverse;
-    align-items: center;
+    align-items: stretch;
     border-radius: 1rem;
+    max-width: 904px;
   }
 
   .card__content {
@@ -189,6 +192,10 @@ body {
   }
 
   .card__image-container img { 
+    width: 100%; 
+    height: 100%; 
+    aspect-ratio: 400 / 593; /* DESKTOP */ 
+    object-fit: cover;
     border-radius: 0 1rem 1rem 0; /* radius solo lato destro */ 
   }
 }
