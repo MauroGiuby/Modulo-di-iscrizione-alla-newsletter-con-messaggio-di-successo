@@ -19,14 +19,21 @@ body {
   max-width: 52rem;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  border-radius: 0;
+
+  /* flex-direction: column; */
+  /* border-radius: 0; */
+}
+
+/* il vero flex container è questo */ 
+.card__container { 
+  display: flex; 
+  flex-direction: column; /* mobile: impilato */ 
 }
 
 /* ==========================================================
    IMAGE
 ========================================================== */
-.card__image-container picture,
+.card__image-container,
 .card__image {
   width: 100%;
   display: block;
@@ -37,6 +44,7 @@ body {
   height: auto; 
   aspect-ratio: 375 / 284; /* Figma mobile */ 
   object-fit: cover; 
+  border-radius: 0;
 }
 
 /* ==========================================================
@@ -174,17 +182,16 @@ body {
 ========================================================== */
 @media (min-width: 900px) {
   .card {
-    display: flex;
-    flex-direction: row-reverse;
     align-items: stretch;
     border-radius: 1rem;
     max-width: 904px;
   }
 
-  .card__content {
-    width: 50%;
+  .card__container {
+    display: flex;
+    flex-direction: row-reverse; /* immagine a destra */ 
+    align-items: stretch;
     padding: var(--spacing-500);
-    border-radius: 1rem 0 0 1rem; /* radius lato sinistro */
   }
 
   .card__image-container {
@@ -198,6 +205,12 @@ body {
     object-fit: cover;
     border-radius: 0 1rem 1rem 0; /* radius solo lato destro */ 
   }
+
+  .card__content { 
+    width: 50%; 
+    padding: var(--spacing-500); 
+    border-radius: 1rem 0 0 1rem; 
+  }
 }
 
 /* ============================
@@ -209,11 +222,15 @@ body {
 @media (min-width: 600px) and (max-width: 899px) {
 
   .card {
-    flex-direction: column;
     border-radius: 1rem; /* attivo */
   }
 
+  .card__container {
+    flex-direction: column;
+  }
+
   .card__image-container img {
+    aspect-ratio: 528 / 358.29;
     border-radius: 1rem 1rem 0 0; /* radius solo sopra */
   }
 
@@ -229,7 +246,7 @@ body {
 .attribution {
   text-align: center;
   font-size: var(--fs-preset-3);
-  margin-top: var(--spacing-400);
+  margin-top: var(--spacing-300);
   color: var(--clr-white);
 }
 
