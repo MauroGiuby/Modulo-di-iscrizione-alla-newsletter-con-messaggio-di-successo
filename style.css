@@ -227,9 +227,9 @@ body {
    ATTRIBUTION FOOTER
 ========================================================== */
 .attribution {
-  margin-top: var(--spacing-400);
   text-align: center;
   font-size: var(--fs-preset-3);
+  margin-top: var(--spacing-400);
   color: var(--clr-white);
 }
 
