@@ -161,8 +161,15 @@ body {
    SUCCESS SCREEN
 ========================================================== */
 .card__success {
+  width: 327px; 
+  min-height: 623px; 
+  margin: 0 auto;
+
   display: none;
   flex-direction: column;
+
+  justify-content: center;
+
   gap: var(--spacing-300);
   padding: var(--spacing-400);
 }
@@ -205,6 +212,12 @@ body {
     padding: var(--spacing-500); 
     border-radius: 1rem 0 0 1rem; 
   }
+
+  .card__success { 
+    width: 504px; 
+    min-height: 520px; 
+    margin: auto; /* centra perfettamente */ 
+  }
 }
 
 /* ============================
@@ -231,6 +244,12 @@ body {
 
   .card__content {
     border-radius: 0 0 1rem 1rem; /* radius solo sotto */
+  }
+
+  .card__success { 
+    width: 504px; 
+    min-height: 520px; 
+    margin: auto; /* centra verticalmente e orizzontalmente */ 
   }
 }
 
