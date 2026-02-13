@@ -2,11 +2,13 @@ body {
   font-family: var(--ff-preset-2-regular);
   background-color: var(--clr-blue-700);
   min-height: 100dvh;
+  padding: var(--spacing-400);
+  color: var(--clr-blue-800);
+  /*
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: var(--spacing-400);
-  color: var(--clr-blue-800);
+  */
 }
 
 /* ==========================================================
@@ -19,6 +21,8 @@ body {
   max-width: 52rem;
   width: 100%;
   display: flex;
+
+  margin: 0 auto;
 
   /* flex-direction: column; */
   /* border-radius: 0; */
@@ -181,6 +185,13 @@ body {
    DESKTOP LAYOUT
 ========================================================== */
 @media (min-width: 900px) {
+  
+  body { 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+  }
+  
   .card {
     align-items: stretch;
     border-radius: 1rem;
