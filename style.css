@@ -84,7 +84,7 @@ body {
 .card__list li {
   background-image: url(./newsletter-sign-up-with-success-message-main/assets/images/icon-list.svg);
   background-repeat: no-repeat;
-  background-position: left top 0px;
+  background-position: left top /*0px*/;
   padding-left: 36px;
   margin-bottom: 12px;
   line-height: 1.4;
