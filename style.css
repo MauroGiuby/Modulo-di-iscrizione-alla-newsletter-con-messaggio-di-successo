@@ -221,6 +221,7 @@ body {
 
   .card__container {
     flex-direction: column;
+    padding: var(--spacing-500); /* ✔ cornice bianca come desktop */
   }
 
   .card__image-container img {
