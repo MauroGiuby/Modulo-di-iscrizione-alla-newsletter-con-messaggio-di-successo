@@ -57,7 +57,12 @@
             <label class="card__label" for="email">Email address</label>
 
             <!-- ERROR MESSAGE (ARIA-LIVE FOR ACCESSIBILITY) -->
-            <span class="card__error-msg" id="error-message" aria-live="polite">
+            <span 
+             class="card__error-msg" 
+             id="error-message" 
+             aria-live="polite"
+             aria-atomic="true"
+             style="display:none;">
               Valid email required
             </span>
           </div>
